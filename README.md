@@ -1,13 +1,19 @@
 # Social_Network_Front_end
-## Node Js Front-End (social media site)
 
+
+### What is the intent for this project ?
+
+For people like you or myself to gain both enjoyment, and the experience creating a platform by novice software engineers To the experts of tomorrow.  This is a place where you can show case the Node.js software packages that you know and would like to contribute time by adding features and to showcase their ability, with Node Js you can create responsive Front-Ends and host many high-trasactional sites such as a social media site like this one.
 
 ### What has been done so far:
 
+- [x] Forcing master branch to be one or more commit behind and force [stability policy] 
 
-- [x] The entire [backend](https://github.com/Hawaiideveloper/) of this Social Media Site ( )
+- [x] The entire [backend](https://github.com/Hawaiideveloper/) of this Social Media Site
 
-- [x] Update the wiki for the backend social media site to reflect this repository
+- [x] Updated the wiki for the backend social media site to reflect this repository
+
+
 
 
 
