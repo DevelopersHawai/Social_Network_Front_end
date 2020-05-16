@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class App extends Component {
   render() {
     return(
-      <div>
+      <div className="container">
         <h1>React Frontend ~  as it renders the contents there please see the file index.js</h1>
       </div>
     )
