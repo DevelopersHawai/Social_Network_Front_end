@@ -26,3 +26,7 @@
 - [ ] Verify the intent of authours, contributors, and reviewers
 - [ ] Assist with clarification of issues and test PR requests and display valid output/findings related to the features proposed to the platform.
 
+
+If any of these roles sound interesting and you have 15 minutes
+- email me at: hawaiideveloper@gmail.com 
+- subject line: Interested in AlcoTerra's social media site
