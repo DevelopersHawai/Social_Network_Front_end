@@ -6,7 +6,7 @@ To get started you will need:
 - [ ] to have node & react installed
 - [ ] to be within the current directory.
 - [ ] Then you will type: `npm start` 
-Frome there you may visit: 'http://localhost:3000' 
+From there you may visit: 'http://localhost:3000' 
 
 
 ### What is the intent for this project ?
