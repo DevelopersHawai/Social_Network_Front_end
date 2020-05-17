@@ -19,26 +19,44 @@ handleChange = (name) => (event) => { //higher super function asking for the eve
             <div className="container">
 
                 <h2 className="mt-5 mb-5"> Signup </h2>
-                <form>
-                    <div className="form-group"> {/* This is where the UI is able to restrict input */}
+                
+                              <form>
+        <div className="form-group"> {/* This is where the UI is able to restrict input */}
                         <label className="text-muted">Name</label> {/*In invisible string but greyed out */}
-                        <input onChange={this.handleChange("name")} type="text" className="form-control"/>
-                    </div> {/* Ahhh here is where "handleChange" takes in the value of name, this allows:
-                    the ability using "onChange" to capture partial information (wink) */}
-                    <div className="form-group"> {/* Create the from group "whatever" */}
-                        <label className="text-muted">Email</label> {/* make it so the user can see where to put 
-                        in their
-                        infomration */}
+                        <input 
+                        /*  here is where "handleChange" takes in the value of name, this allows:
+                    the ability using "onChange" to capture partial information (wink) */
+                            onChange={this.handleChange("name")} 
+                            type="text" 
+                            className="form-control" 
+                            value={this.state.name} /* we grab the state and place its value into name */
+                        />
+        </div> 
+                         {/* Next do above; 2X  (email and password) */}
+               
+        <div className="form-group"> {/* Create the from group "whatever" */}
+                        <label className="text-muted">Email</label> 
+                        /* make it so the user can see where to put in theirinfomration */
 
-                        {/* Then we do above 2 more times so that we have email and password */}
-                        <input onChange={this.handleChange("email")} type="text"className="form-control"/>
-                    </div>
-                    <div className="form-group">
+                        
+                        <input 
+                        onChange={this.handleChange("email")} 
+                        type="email"
+                        className="form-control"
+                        />
+        </div>
+                
+        <div className="form-group">
                         <label className="text-muted">Password</label>
-                        <input onChange={this.handleChange("password")}type="password" className="form-control"/>
-                    </div>
+                        <input 
+                        onChange={this.handleChange("password")}
+                        /* masks the password */
+                        type="password" 
+                        className="form-control"
+                        />
+        </div>
                     <button className="btn btn-raised btn-primary"> Submit </button>   
-                </form>
+                             </form>
             </div>
         );
     }
