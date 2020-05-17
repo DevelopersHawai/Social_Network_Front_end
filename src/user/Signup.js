@@ -23,7 +23,8 @@ handleChange = (name) => (event) => { //higher super function asking for the eve
                     <div className="form-group"> {/* This is where the UI is able to restrict input */}
                         <label className="text-muted">Name</label> {/*In invisible string but greyed out */}
                         <input onChange={this.handleChange("name")} type="text" className="form-control"/>
-                    </div> {/* Ahhh here is where "handleChange" takes in the value of name */}
+                    </div> {/* Ahhh here is where "handleChange" takes in the value of name, this allows:
+                    the ability using "onChange" to capture partial information (wink) */}
                     <div className="form-group"> {/* Create the from group "whatever" */}
                         <label className="text-muted">Email</label> {/* make it so the user can see where to put 
                         in their
