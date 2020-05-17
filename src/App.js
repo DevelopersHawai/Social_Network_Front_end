@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
+import {BrowserRouter} from 'react-router-dom'
+import MainRouter from './MainRouter'
 
-class App extends Component {
-  render() {
-    return(
-      <div className="container">
-        <h1>React Frontend ~  as it renders the contents there please see the file index.js</h1>
-      </div>
-    )
-  }
-}
+const App = () => (
+    <BrowserRouter>
+        <MainRouter />
+    </BrowserRouter>
+)
 
 export default App;
