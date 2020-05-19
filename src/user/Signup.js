@@ -11,19 +11,28 @@ class Signup extends Component { //Is the component a react function of scan lik
             name: "", //The person we build
             email: "", //Their email we have
             password: "",  //Their unique identifyier that they only know
-            error:""  //Not sure why we have this one?
+            error:""  //value can be added to this user profile for support later on?
         }
     }
-handleChange = (name) => (event) => { //higher super function asking for the event values
-    this.setState({[name]: event.target.value}); //this moment in time grab name and all its values
+handleChange = (name) => (event) => { //higher order function returns another function
+    this.setState({[name]: event.target.value}); //Using an array syntax, it will
+    // have the value when it is used on email and password
+    //this moment in time grab the next value if you look above from line 10
+    // this.state {name, email, password}: but start with name
+    //name 
+    //email
+    //password
+    //they should match event.target.value like: //check line 10-14
+    //onChange={this.handleChange("name"),("email"),("password")
+    // That is how you set a state.
 }
 
     render() {
-        const {name, email, password} = this.state  //destructure is a Big O
+        const {name, email, password} = this.state  //destructure is a Big O 
         return (
             <div className="container">
 
-                <h2 className="mt-5 mb-5"> Signup </h2>
+                <h2 className="mt-5 mb-5"> Signup </h2>  {/*// margin of 5 bottom of 5*/}
                 
                               <form>
         <div className="form-group"> {/* This is where the UI is able to restrict input */}
@@ -35,7 +44,7 @@ handleChange = (name) => (event) => { //higher super function asking for the eve
                             onChange={this.handleChange("name")} 
                             type="text" 
                             className="form-control" 
-                            value={this.state.name} /* we grab the state and place its value into name */
+                            value={name} /* we grab the state and place its value into name */
                         />
         </div> 
                          {/* Next do above; 2X  (email and password) */}
