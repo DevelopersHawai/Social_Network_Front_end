@@ -27,6 +27,17 @@ handleChange = (name) => (event) => { //higher order function returns another fu
     // That is how you set a state.
 }
 
+clickSubmit = event => {
+    event.preventDefault()
+    const { name, email, password } = this.state
+    const user = {
+        name,
+        email,
+        password
+    };
+    //console.log(user); great for testing the data collector
+};
+
     render() {
         const {name, email, password} = this.state  //destructure is a Big O 
         return (
@@ -70,7 +81,8 @@ handleChange = (name) => (event) => { //higher order function returns another fu
                         value={password}/* we destructured the syntax (this.state) then we grab the state and place its value into email */
                         />
         </div>
-                    <button className="btn btn-raised btn-primary"> Submit </button>   
+                    <button onClick={this.clickSubmit} //the method to ...
+                    className="btn btn-raised btn-primary"> Submit </button>   
                              </form>
             </div>
         );
