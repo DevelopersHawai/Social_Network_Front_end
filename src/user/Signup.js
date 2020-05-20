@@ -11,10 +11,12 @@ class Signup extends Component { //Is the component a react function of scan lik
             name: "", //The person we build
             email: "", //Their email we have
             password: "",  //Their unique identifyier that they only know
-            error:""  //value can be added to this user profile for support later on?
-        }
+            error:"",  //value can be added to this user profile for support later on?
+            open: false
+        };
     }
 handleChange = (name) => (event) => { //higher order function returns another function
+    this.setState ({error: ""}); // used to clear the previous error
     this.setState({[name]: event.target.value}); //Using an array syntax, it will
     // have the value when it is used on email and password
     //this moment in time grab the next value if you look above from line 10
@@ -35,8 +37,22 @@ clickSubmit = event => {
         email,
         password
     };
-    console.log(user); //great for testing the data collector
-    fetch("http://localhost:8080/signup", {  //making a request to the backend
+    // console.log(user); //great for testing the data collector
+    this.signup(user)
+    .then(data => {
+        if(data.error) this.setState({error: data.error})  //we capture the error and it is
+        //stored as a value in the error err field
+        else this.setState({
+            error: "",
+            name: "",
+            email: "",
+            password: "",
+            open: true
+        });
+    });
+};
+    signup = user => {
+        return fetch("http://localhost:8080/signup", {  //making a request to the backend
         method: "POST", 
         headers: { //good practive to list headers to avoid post errors
             Accept: "application/json", 
@@ -51,12 +67,23 @@ clickSubmit = event => {
     )};
 
     render() {
-        const {name, email, password} = this.state  //destructure is a Big O 
+        const {name, email, password, error, open} = this.state  //destructure is a Big O 
         return (
             <div className="container">
 
                 <h2 className="mt-5 mb-5"> Signup </h2>  {/*// margin of 5 bottom of 5*/}
                 
+{/* The error message will be above the form - the light blue stripe*/}
+ {/*condiitonal value is set within the style tag to appear only on error */}
+            <div className="alert alert-primary" style={{display: error ? "" :"none"}}> 
+           
+                {error} {/*this is destructured and collects the state value */}
+            </div>
+            <div className="alert alert-info" style={{display: open ? "" :"none"}}
+            > 
+            Account created Successfully.  Please SignIn  
+                </div>
+
                               <form>
         <div className="form-group"> {/* This is where the UI is able to restrict input */}
                         <label className="text-muted">
