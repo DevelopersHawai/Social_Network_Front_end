@@ -71,8 +71,10 @@ clickSubmit = event => {
                 <h2 className="mt-5 mb-5"> Signup </h2>  {/*// margin of 5 bottom of 5*/}
                 
 {/* The error message will be above the form - the light blue stripe*/}
-            <div className="alert alert-primary">
-                {error}
+ {/*condiitonal value is set within the style tag to appear only on error */}
+            <div className="alert alert-primary" style={{display: error ? "" :"none"}}> 
+           
+                {error} {/*this is destructured and collects the state value */}
             </div>
 
 
