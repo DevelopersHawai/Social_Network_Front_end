@@ -35,7 +35,7 @@ clickSubmit = event => {
         email,
         password
     };
-    console.log(user); great for testing the data collector
+    console.log(user); //great for testing the data collector
     fetch("http://localhost:8080/signup", {  //making a request to the backend
         method: "POST", 
         headers: { //good practive to list headers to avoid post errors
