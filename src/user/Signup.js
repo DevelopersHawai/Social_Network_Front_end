@@ -38,7 +38,8 @@ clickSubmit = event => {
     // console.log(user); //great for testing the data collector
     this.signup(user)
     .then(data => {
-        if(data.error) this.setState({error: data.error})
+        if(data.error) this.setState({error: data.error})  //we capture the error and it is
+        //stored as a value in the error err field
         else this.setState({
             error: "",
             name: "",
@@ -63,12 +64,18 @@ clickSubmit = event => {
     )};
 
     render() {
-        const {name, email, password} = this.state  //destructure is a Big O 
+        const {name, email, password, error} = this.state  //destructure is a Big O 
         return (
             <div className="container">
 
                 <h2 className="mt-5 mb-5"> Signup </h2>  {/*// margin of 5 bottom of 5*/}
                 
+{/* The error message will be above the form - the light blue stripe*/}
+            <div className="alert alert-primary">
+                {error}
+            </div>
+
+
                               <form>
         <div className="form-group"> {/* This is where the UI is able to restrict input */}
                         <label className="text-muted">
