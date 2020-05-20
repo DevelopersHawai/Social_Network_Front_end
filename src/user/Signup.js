@@ -11,10 +11,12 @@ class Signup extends Component { //Is the component a react function of scan lik
             name: "", //The person we build
             email: "", //Their email we have
             password: "",  //Their unique identifyier that they only know
-            error:""  //value can be added to this user profile for support later on?
-        }
+            error:"",  //value can be added to this user profile for support later on?
+            open: false
+        };
     }
 handleChange = (name) => (event) => { //higher order function returns another function
+    this.setState ({error: ""}); // used to clear the previous error
     this.setState({[name]: event.target.value}); //Using an array syntax, it will
     // have the value when it is used on email and password
     //this moment in time grab the next value if you look above from line 10
@@ -44,7 +46,8 @@ clickSubmit = event => {
             error: "",
             name: "",
             email: "",
-            password: ""
+            password: "",
+            open: true
         });
     });
 };
@@ -64,7 +67,7 @@ clickSubmit = event => {
     )};
 
     render() {
-        const {name, email, password, error} = this.state  //destructure is a Big O 
+        const {name, email, password, error, open} = this.state  //destructure is a Big O 
         return (
             <div className="container">
 
@@ -76,7 +79,10 @@ clickSubmit = event => {
            
                 {error} {/*this is destructured and collects the state value */}
             </div>
-
+            <div className="alert alert-info" style={{display: open ? "" :"none"}}
+            > 
+            Account created Successfully.  Please SignIn  
+                </div>
 
                               <form>
         <div className="form-group"> {/* This is where the UI is able to restrict input */}
