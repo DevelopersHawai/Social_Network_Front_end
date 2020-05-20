@@ -35,8 +35,20 @@ clickSubmit = event => {
         email,
         password
     };
-    console.log(user); //great for testing the data collector
-    fetch("http://localhost:8080/signup", {  //making a request to the backend
+    // console.log(user); //great for testing the data collector
+    this.signup(user)
+    .then(data => {
+        if(data.error) this.setState({error: data.error})
+        else this.setState({
+            error: "",
+            name: "",
+            email: "",
+            password: ""
+        });
+    });
+};
+    signup = user => {
+        return fetch("http://localhost:8080/signup", {  //making a request to the backend
         method: "POST", 
         headers: { //good practive to list headers to avoid post errors
             Accept: "application/json", 
