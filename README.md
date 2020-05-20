@@ -6,13 +6,21 @@ To get started you will need:
 - [ ] to have node & react installed
 - [ ] to be within the current directory.
 - [ ] Then you will type: `npm start` 
-Frome there you may visit: 'http://localhost:3000' 
+From there you may visit: 'http://localhost:3000' 
 
 
 ### What is the intent for this project ?
 
 For people like you or myself to gain both enjoyment, and the experience creating a platform by novice software engineers To the experts of tomorrow.  This is a place where you can show case the Node.js software packages that you know and would like to contribute time by adding features and to showcase their ability, with Node Js you can create responsive Front-Ends and host many high-trasactional sites such as a social media site like this one.
 
+The intent is to attract you to contribute in a few ways.  Please see here on how to [contribute](https://github.com/Hawaiideveloper/nodeJS_SocialMediaSite/blob/master/Maintainers_Contributors.md)
+
+### Some issues you may face; but we have answers and can help you:
+    
+  - [x] [Focus](https://github.com/Hawaiideveloper/nodeJS_SocialMediaSite/issues/4)
+  - [x] [Time Management](https://youtu.be/71PAn8DNsr4)
+  - [ ] [Finishing a project]- link not ready until the site shows the main page and its finished.
+  
 ### What has been done so far:
 
 - [x] Forcing master branch to be one or more commit behind and force [stability policy] 
