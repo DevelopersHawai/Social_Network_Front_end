@@ -118,7 +118,7 @@ clickSubmit = event => {
                 
 {/* The error message will be above the form - the light blue stripe*/}
  {/*condiitonal value is set within the style tag to appear only on error */}
-            <div className="alert alert-primary" style={{display: error ? "" :"none"}}> 
+            <div className="alert alert-danger" style={{display: error ? "" :"none"}}> 
            
                 {error} {/*this is destructured and collects the state value */}
             </div>
