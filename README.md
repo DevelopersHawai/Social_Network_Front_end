@@ -42,19 +42,25 @@ When I was 19 years old, now 42.  I used to scrub floors and clean bathrooms in 
 
 Then my mother advised me to create my own company cleaning and while it made me money I was never really happy.  So I took it amoung myself to sell perfume which failed as my ability to walk up to strangers in the street and beg them to buy perfume was not really going well either.
 
-So in 2000 I joined Strayer University.  I thought it would of done something for me, but I really did not learn much from there.  So I went for my MCSE and although I was good enough to support millions of dollars of equipment.  I was often the first to be let go when a newer or younger generation applied for my job.
+So in 2000 I joined company x University before our beloved computer learning center went out of business.  I thought it would of done something for me, but I really did not learn much from there.  So I went for my MCSE and although I was good enough to support millions of dollars of equipment.  I was often the first to be let go when a newer or younger generation applied for my job.
 
-After being fired, laid-off, and burned out.  I now have decided that free lance work is what I do, or my salary is $200k and I don't do interviews.
+After being burned out, and furloughed.  I now have decided that contract work, as a business will be the right fit for me.
 
-You either pay me, or you bounce, because my time is programming time, and I get paid to program devices, and make sofware.  So I have told myself, this is my last stand.  I sink or I swim.  If I sink, then I inject myself back into the "system" and I allow the machine to control my very existence, or...
+So I have told myself, this is my last stand.  I sink or I swim.  If I sink, then I inject myself back into the "system" and I allow the machine to control my very existence, and keep coding someone else's vision or...
 
-This platform will make everyone who works on it money, and returns to you all the time you spent into it, but without financial burdens and stress that the average human being goes through when visiting the lack of money.
+This platform will make everyone who works on it rich, and it will allow your grandchildren's grandchildren the opportunity that Henry Ford gave his family.
 
-I pray that your development skills are improve while you learn on this platform to assist in adding one new feature to this community so that we can endorse you and help you get that new job or start your own company.
+I pray that your development skills improve while you learn on this platform.  Then I hope you assist in adding one new feature to this project before you take off.  
 
-I pray to my GOD and I work for myself going forward, after working for a great group of people, and watching for so long.  
+As this is a community so that we can endorse you and help you get that new job or start your own company.  Or just be there for you for javascript chit chat.
 
-I see myself in the future, with a mansion, a few Lamborghinis and a wine collection so we all can celebrate both yours and my wealth as I promise to share if you promise to commit the time.
+I pray to my GOD that I make enough to work for myself at home, and that I only have to work one day a week because the rest of it; I beg him for fun.  Going forward, after working for a great group of people, at my last job and watching for so long.  
+
+I see myself in the future, learning to be quiet more and do more work that what is required of me.  As a good work ethic always involve 40 hours a week.
+
+So I am doing this project for my family and you, as the world needs the ultimate platform for buying, trading, selling, visiting, or playing network.  
+
+So its time that I create such a platform and hopefully someone will fund me, so that I can get enough help to build, to what it to ought to be.
 
 ### Backgroud to the present moment May 16, 2020 (9:43am)
 When the [covid-19]() virus spread into the world, as of May 11, 2020 (19:26 GMT) there were 4,235,237 cases of the virus and over 285,946 deaths.  People were concerned with socially interacting with one another physically, and companies started to endorse remotely working.  

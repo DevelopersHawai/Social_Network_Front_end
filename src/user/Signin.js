@@ -53,7 +53,7 @@ clickSubmit = event => {
     signin = user => {
         return fetch("http://localhost:8080/signin", {  //making a request to the backend
         method: "POST", 
-        headers: { //good practive to list headers to avoid post errors
+        headers: { //good practive to list headers to avoid collections errors
             Accept: "application/json", 
             "Content-Type": "application/json"
         },
