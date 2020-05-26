@@ -13,20 +13,21 @@ class Signin extends Component { //Is the component a react function of scan lik
             email: "", //Their email we have
             password: "",  //Their unique identifyier that they only know
             error:"",  //value can be added to this user profile for support later on?
-            redirectToReferer: false  //turns to true after user is authenticated
-           
+            redirectToReferer: false,  //turns to true after user is authenticated
+            loading: false           
         };
     }
-handleChange = name => event => { //higher order function returns another function
-    this.setState ({error: ""}); // used to clear the previous error
-    this.setState({[name]: event.target.value}); //Using an array syntax, it will
-    // have the value when it is used on email and password
-    //this moment in time grab the next value if you look above from line 10
-    // this.state {name, email, password}: but start with name
-    //name 
-    //email
-    //password
-    //they should match event.target.value like: //check line 10-14
+
+    handleChange = name => event => { //higher order function returns another function
+        this.setState ({error: ""}); // used to clear the previous error
+        this.setState({[name]: event.target.value}); //Using an array syntax, which
+                // point it to start at name then have the value when it is used on email and password
+                //this moment in time grab the next value if you look above from line 10
+                 // this.state {name, email, password}: but start with name
+                //name 
+                //email
+                //password
+    //they should match event.target.value like: this.state.[value]
     //onChange={this.handleChange("name"),("email"),("password")
     // That is how you set a state.
 };
@@ -42,6 +43,7 @@ authenticate = (jwt, next) => {
 
 clickSubmit = event => {
     event.preventDefault();
+    this.setState({loading: true});
     const { email, password } = this.state;
     const user = {
         email,
@@ -52,7 +54,7 @@ clickSubmit = event => {
     this.signin(user).then(data => {
         //if error we capture the error and it is displayed
         if(data.error)  {
-            this.setState({ error: data.error});  
+            this.setState({ error: data.error, loading: false});  
         //stored as a value in the error err field
         // otherwise 
         //Pass the json web token to method and then it be on local storage 
@@ -64,7 +66,7 @@ clickSubmit = event => {
             //eslint-disable-next-line                  
             this .authenticate(data, () => { 
             this.setState({redirectToReferer: true})   
-            })
+            });
         }
     });   
 };
@@ -121,7 +123,7 @@ clickSubmit = event => {
  
     render() {
         // eslint-disable-next-line
-        const { email, password, error, redirectToReferer} = this.state  //destructure is a Big O
+        const { email, password, error, redirectToReferer, loading} = this.state  //destructure is a Big O
         
         if(redirectToReferer) {
             return <Redirect to="/" />
@@ -137,7 +139,9 @@ clickSubmit = event => {
            
                 {error} {/*this is destructured and collects the state value */}
             </div>
-            
+            {loading ? <div className="jumbotron text-center">
+                        <h2>...Loading... </h2> {/* This is where animation can go for loading*/}
+                        </div> : ""}
                 {this.signinForm( email, password)}
                                           </div>
         );
