@@ -11,9 +11,11 @@ From there you may visit: 'http://localhost:3000'
 
 ### What is the intent for this project ?
 
-For people like you or myself to gain both enjoyment, and the experience creating a platform by novice software engineers To the experts of tomorrow.  This is a place where you can show case the Node.js software packages that you know and would like to contribute time by adding features and to showcase their ability, with Node Js you can create responsive Front-Ends and host many high-trasactional sites such as a social media site like this one.
+For people like myself to gain both the enjoyment, and the experience creating a platform by a novice software engineer.  With Node Js & the React library you can create responsive Back-Ends Front-Ends and host many high-trasactional sites such as a social media sites like this one.
 
-The intent is to attract you to contribute in a few ways.  Please see here on how to [contribute](https://github.com/Hawaiideveloper/nodeJS_SocialMediaSite/blob/master/Maintainers_Contributors.md)
+
+### Contribute
+If you to contribute.  Please see here on how to [contribute](https://github.com/Hawaiideveloper/nodeJS_SocialMediaSite/blob/master/Maintainers_Contributors.md)
 
 
   
