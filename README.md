@@ -15,7 +15,7 @@ For people like myself to gain both the enjoyment, and the experience creating a
 
 
 ### Contribute
-If you to contribute.  Please see here on how to [contribute](https://github.com/Hawaiideveloper/nodeJS_SocialMediaSite/blob/master/Maintainers_Contributors.md)
+If you want to contribute.  Please see here on how to [contribute](https://github.com/Hawaiideveloper/nodeJS_SocialMediaSite/blob/master/Maintainers_Contributors.md)
 
 
   
