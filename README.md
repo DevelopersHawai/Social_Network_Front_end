@@ -11,7 +11,7 @@ From there you may visit: 'http://localhost:3000'
 
 ### What is the intent for this project ?
 
-For people like myself to gain both the enjoyment, and the experience creating a platform by a novice software engineer.  With Node Js & the React library you can create responsive Back-Ends Front-Ends and host many high-trasactional sites such as a social media sites like this one.
+For people like myself to gain both the enjoyment, and the experience creating a platform with Node Js & the React that has a high-trasactional Back-End and render responsive front-end  sites such as a social media sites like this one.
 
 
 ### Contribute
