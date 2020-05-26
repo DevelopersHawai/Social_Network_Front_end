@@ -16,7 +16,7 @@ class Signin extends Component { //Is the component a react function of scan lik
            
         };
     }
-handleChange = (name) => (event) => { //higher order function returns another function
+handleChange = name => event => { //higher order function returns another function
     this.setState ({error: ""}); // used to clear the previous error
     this.setState({[name]: event.target.value}); //Using an array syntax, it will
     // have the value when it is used on email and password
@@ -31,16 +31,18 @@ handleChange = (name) => (event) => { //higher order function returns another fu
 }
 
 clickSubmit = event => {
-    event.preventDefault()
-    const { email, password } = this.state
+    event.preventDefault();
+    const { email, password } = this.state;
     const user = {
         email,
         password
     };
-    // console.log(user); //great for testing the data collector
-    this.signin(user)
-    .then(data => {
-        if(data.error) {this.setState({error: data.error});  //we capture the error and it is
+    //great for testing the data collector
+     console.log(user); 
+    this.signin(user).then(data => {
+        //we capture the error and it is
+        if(data.error) {
+            this.setState({ error: data.error});  
         //stored as a value in the error err field
        // otherwise 
     } else { 
