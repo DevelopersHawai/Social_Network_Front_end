@@ -12,7 +12,7 @@ class Signin extends Component { //Is the component a react function of scan lik
             email: "", //Their email we have
             password: "",  //Their unique identifyier that they only know
             error:"",  //value can be added to this user profile for support later on?
-            redirecttoReferer: false
+            redirectToReferer: false  //turns to true after user is authenticated
            
         };
     }
@@ -28,7 +28,16 @@ handleChange = name => event => { //higher order function returns another functi
     //they should match event.target.value like: //check line 10-14
     //onChange={this.handleChange("name"),("email"),("password")
     // That is how you set a state.
-}
+};
+  //jason web token 'jwt' 
+authenticate = (jwt, next) => {
+    // Make sure a window is ready as these things take time
+    if(typeof window !== "undefined") {
+        localStorage.setItem("jwt", JSON.stringify(jwt))
+        next(); // callback
+    };
+ };
+ 
 
 clickSubmit = event => {
     event.preventDefault();
@@ -40,18 +49,24 @@ clickSubmit = event => {
     //great for testing the data collector
      console.log(user); 
     this.signin(user).then(data => {
-        //we capture the error and it is
-        if(data.error) {
+        //if error we capture the error and it is displayed
+        if(data.error)  {
             this.setState({ error: data.error});  
         //stored as a value in the error err field
-       // otherwise 
-    } else { 
+        // otherwise 
+        //Pass the json web token to method and then it be on local storage 
         //authenticate the user and redirect
-    }
-
-        });
-   
-    };
+        }
+        else  
+        {  
+            //to disable whitespace error
+            //eslint-disable-next-line                  
+            this .authenticate(data, () => { 
+            this.setState({redirectToReferer: true})   
+            })
+        }
+    });   
+};
     signin = user => {
         return fetch("http://localhost:8080/signin", {  //making a request to the backend
         method: "POST", 
