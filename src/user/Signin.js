@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 
 
@@ -117,9 +118,14 @@ clickSubmit = event => {
                              </form>
 
     )
-
+ 
     render() {
-        const { email, password, error} = this.state  //destructure is a Big O 
+        // eslint-disable-next-line
+        const { email, password, error, redirectToReferer} = this.state  //destructure is a Big O
+        
+        if(redirectToReferer) {
+            return <Redirect to="/" />
+        }
         return (
             <div className="container">
 
@@ -139,3 +145,8 @@ clickSubmit = event => {
 }
 
 export default Signin;
+
+//More than likely we will add more fields and setup third party authentications sign-ups like 
+//google
+//facebook
+// blah blah blah

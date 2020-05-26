@@ -26,3 +26,7 @@ If you want to contribute.  Please see here on how to [contribute](https://githu
 - [x] The entire [backend](https://github.com/Hawaiideveloper/) of this Social Media Site
 
 - [x] Updated the wiki for the backend social media site to reflect this repository
+
+- [x] User Sign-up front-end is functional
+
+- [x] User Sign-in is functional
