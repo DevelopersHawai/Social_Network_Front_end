@@ -66,10 +66,14 @@ clickSubmit = event => {
     .catch(err => console.log(err)
     )};
 
+    //The methoid signup form has 3 data points name, email, and passowrd
+    // Then those data points are passed to a funtion
+    //the function becomes the form and sits inside the code below
     signupForm = (name, email, password) => (
+        
         <form>
         <div className="form-group"> {/* This is where the UI is able to restrict input */}
-                        <label className="text-muted">
+                        <label className="text-muted" >
             Name</label> {/*In invisible string but greyed out */}
                         <input 
                         /*  here is where "handleChange" takes in the value of name, this allows:
@@ -83,17 +87,20 @@ clickSubmit = event => {
                          {/* Next do above; 2X  (email and password) */}
                
         <div className="form-group"> {/* Create the from group "whatever" */}
-                        <label className="text-muted">
+                        <label className="text-muted" >
             Email</label> 
                         <input 
                         onChange={this.handleChange("email")} 
                         type="email"
                         className="form-control"
                         value={email}/* we destructured the syntax (this.state) the state and place its value into email */
+                        placeholder="email@company.com .......  format expected"
                         />
+
         </div>
         <div className="form-group">
                         <label className="text-muted">
+                      
             Password</label>
                         <input 
                         onChange={this.handleChange("password")}
@@ -106,6 +113,9 @@ clickSubmit = event => {
                     <button onClick={this.clickSubmit} //the method to ...
                     className="btn btn-raised btn-primary"> Submit </button>   
                              </form>
+
+
+
 
     )
 
