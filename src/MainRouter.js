@@ -10,7 +10,7 @@ const MainRouter = () => (
         <Menu />
         <Switch>
             <Route exact path="/" component={Home}></Route>
-            <Route exact path="/signup" component={Signup}></Route>
+            <Route exact path="/signup" component={Signup }></Route>
             <Route exact path="/signin" component={Signin}></Route>  
         
         </Switch>
