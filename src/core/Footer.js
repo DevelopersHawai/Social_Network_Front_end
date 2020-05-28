@@ -20,18 +20,6 @@ export const signout = (next) => {
       .catch(err => console.log(err))
 }
 
-export const isAuthenticated = () => {
-      if(typeof window == "undefined") {
-            return false
-      }
-      if(localStorage.getItem("jwt")) {
-            return JSON.parse(localStorage.getItem("jwt"))
-      } else {
-            return false
-      }
-};
-
-
 // The tabs and style come from boot strap material site
 //bootsrap material designß
 const Menu = ({history}) => ( //destructure here of props
@@ -47,7 +35,7 @@ const Menu = ({history}) => ( //destructure here of props
                 className="nav-link" 
                 style={isActive(history, "/about")}  
                 to="/about"> 
-            Contact-us 
+            Press Release 
                 </Link>
             </li>
             
@@ -57,50 +45,40 @@ const Menu = ({history}) => ( //destructure here of props
             <li className="nav-item">
                   <Link 
                   className="nav-link" style={isActive(history, "/")} to="/"> 
-            Home 
+            IPO
                   </Link>
        </li>
 
-{/*The comment below is showing the signin and signout links if the */}
-{/* User is not authenticated */}
-      {!isAuthenticated() && (
-            <> {/* yes this works in react because of react dot fragments */}
-               {/* Sign-up page */} 
+   {/* Sign-up page */} 
 
-               <li className="nav-item">
-               <Link 
-               className="nav-link" style={isActive(history, "/signup")} to="/signup">  
-         Sign-Up  
-               </Link>
-     </li>
+            <li className="nav-item">
+                  <Link 
+                  className="nav-link" style={isActive(history, "/signup")} to="/signup">  
+           Whats New  
+                  </Link>
+        </li>
 
-{/* Signin page */} 
+ {/* Signin page */} 
 
 
-       <li className="nav-item">
-             <Link 
-             className="nav-link" style={isActive(history, "/signin")}  to="/signin"> 
-         Sign-In  
-             </Link>
-         </li>
-         </>
-      )}
+          <li className="nav-item">
+                <Link 
+                className="nav-link" style={isActive(history, "/signin")}  to="/signin"> 
+            Investor Publications  
+                </Link>
+            </li>
 
-            {isAuthenticated() && (
-              /* SignOut page  is hidden until authenticated*/         
+  {/*SignOut page*/}          
             <li className="nav-item">
                 <a
                 className="nav-link" 
-                style={
-                     (isActive(history, "/signout"), 
-                {curser: "pointer", color: "#999999"}) 
-               }
-                onClick={() => signout(() => history.push("/signout"))}
+                style={isActive(history, "/signout")}  
+                to="/signout"
+                onClick={() => signout(() => history.push('/signout'))}
                 > 
-            Sign-Out  
+            Careers  
                 </a>
             </li>
-      )}
       </ul>
 </div>
 );

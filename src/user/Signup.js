@@ -130,7 +130,7 @@ clickSubmit = event => {
         return (
             <div className="container">
 
-                <h2 className="mt-5 mb-5"> Signup  </h2>  {/*// margin of 5 bottom of 5*/}
+                <h2 className="ml-0 mt-5 mb-5" > Signup  </h2>  {/*// margin of 5 bottom of 5*/}
                 
 {/* The error message will be above the form - the light blue stripe*/}
  {/*condiitonal value is set within the style tag to appear only on error */}
