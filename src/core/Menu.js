@@ -20,6 +20,18 @@ export const signout = (next) => {
       .catch(err => console.log(err))
 }
 
+export const isAuthenticated = () => {
+      if(typeof window == "undefined") {
+            return false
+      }
+      if(localStorage.getItem("jwt")) {
+            return JSON.parse(localStorage.getItem("jwt"))
+      } else {
+            return false
+      }
+};
+
+
 // The tabs and style come from boot strap material site
 //bootsrap material designß
 const Menu = ({history}) => ( //destructure here of props
@@ -49,24 +61,30 @@ const Menu = ({history}) => ( //destructure here of props
                   </Link>
        </li>
 
-   {/* Sign-up page */} 
+{/*The comment below is showing the signin and signout links if the */}
+{/* User is not authenticated */}
+      {!isAuthenticated && (
+            <div>
+               {/* Sign-up page */} 
 
-            <li className="nav-item">
-                  <Link 
-                  className="nav-link" style={isActive(history, "/signup")} to="/signup">  
-            Sign-Up  
-                  </Link>
-        </li>
+               <li className="nav-item">
+               <Link 
+               className="nav-link" style={isActive(history, "/signup")} to="/signup">  
+         Sign-Up  
+               </Link>
+     </li>
 
- {/* Signin page */} 
+{/* Signin page */} 
 
 
-          <li className="nav-item">
-                <Link 
-                className="nav-link" style={isActive(history, "/signin")}  to="/signin"> 
-            Sign-In  
-                </Link>
-            </li>
+       <li className="nav-item">
+             <Link 
+             className="nav-link" style={isActive(history, "/signin")}  to="/signin"> 
+         Sign-In  
+             </Link>
+         </li>
+         </div>
+      )}
 
   {/*SignOut page*/}          
             <li className="nav-item">
