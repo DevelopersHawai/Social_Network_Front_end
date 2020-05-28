@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {signup} from '../auth/'
 
 
 
@@ -51,20 +51,7 @@ clickSubmit = event => {
         });
     });
 };
-    signup = user => {
-        return fetch("http://localhost:8080/signup", {  //making a request to the backend
-        method: "POST", 
-        headers: { //good practive to list headers to avoid post errors
-            Accept: "application/json", 
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
-    })
-    .then(response => {
-        return response.json()
-    })
-    .catch(err => console.log(err)
-    )};
+ 
 
     //The methoid signup form has 3 data points name, email, and passowrd
     // Then those data points are passed to a funtion

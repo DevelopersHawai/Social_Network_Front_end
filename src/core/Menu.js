@@ -88,6 +88,7 @@ const Menu = ({history}) => ( //destructure here of props
 
             {isAuthenticated() && (
               /* SignOut page  is hidden until authenticated*/         
+            <>
             <li className="nav-item">
                 <a
                 className="nav-link" 
@@ -100,6 +101,18 @@ const Menu = ({history}) => ( //destructure here of props
             Sign-Out  
                 </a>
             </li>
+            <li className="nav-item">
+                <a
+                className="nav-link" 
+                
+             
+                > 
+            {isAuthenticated().user.name}  
+                </a>
+            </li>
+                  
+            </>
+
       )}
       </ul>
 </div>
