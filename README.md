@@ -5,7 +5,7 @@ To get started you will need:
 
 - [ ] to have node & react installed
 - [ ] to be within the current directory.
-- [ ] Then you will type: `npm start` 
+- [ ] Then you will type: `yarn start` or `npm start` 
 From there you may visit: 'http://localhost:3000' 
 
 
@@ -15,7 +15,7 @@ For people like myself to gain both the enjoyment, and the experience creating a
 
 
 ### Contribute
-If you want to contribute.  Please see here on how to [contribute](https://github.com/Hawaiideveloper/nodeJS_SocialMediaSite/blob/master/Maintainers_Contributors.md)
+If you want to contribute.  Please see here on how to [contribute](https://github.com/Hawaiideveloper/Social_Network_Front_end/wiki/Contributors-%5BDevelopers%5D-&-Reviewers-%5BTesters%5D-&-Moderators-%5BComment-and-forum-Referees-%5D)
 
 
   
