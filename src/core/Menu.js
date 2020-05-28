@@ -63,7 +63,7 @@ const Menu = ({history}) => ( //destructure here of props
 
 {/*The comment below is showing the signin and signout links if the */}
 {/* User is not authenticated */}
-      {!isAuthenticated && (
+      {!isAuthenticated() && (
             <div>
                {/* Sign-up page */} 
 
