@@ -38,7 +38,7 @@ clickSubmit = event => {
         password
     };
     // console.log(user); //great for testing the data collector
-    this.signup(user)
+    signup(user)
     .then(data => {
         if(data.error) this.setState({error: data.error})  //we capture the error and it is
         //stored as a value in the error err field

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import {signin, authenticate } from '../auth'
+import {signin, authenticate } from '../auth';
 
 
 
@@ -43,7 +43,7 @@ clickSubmit = event => {
     };
     //great for testing the data collector
      console.log(user); 
-    this.signin(user).then(data => {
+    signin(user).then(data => {
         //if error we capture the error and it is displayed
         if(data.error)  {
             this.setState({ error: data.error, loading: false});  
@@ -56,7 +56,7 @@ clickSubmit = event => {
         {  
             //to disable whitespace error
             //eslint-disable-next-line                  
-            this .authenticate(data, () => { 
+            authenticate(data, () => { 
             this.setState({redirectToReferer: true})   
             });
         }

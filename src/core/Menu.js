@@ -1,35 +1,14 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import {signout, isAuthenticated} from  '../auth'
+
+
 
 const isActive = (history, path) => {
       if(history.location.pathname === path) return {color: "#1092F2"}
       else return {color: "#999999"}
 };
 
-
-export const signout = (next) => {
-      if(typeof window !== "undefined") localStorage.removeItem("jwt") //delete the local storage contents of the jwt &
-                  next(); // then make sure we log them out of our backend api
-      return fetch("http://localhost:8080/signout", {
-      method: "GET"
-})
-      .then( response  => {
-            console.log('signout', response)
-            return response.json()
-      })
-      .catch(err => console.log(err))
-}
-
-export const isAuthenticated = () => {
-      if(typeof window == "undefined") {
-            return false
-      }
-      if(localStorage.getItem("jwt")) {
-            return JSON.parse(localStorage.getItem("jwt"))
-      } else {
-            return false
-      }
-};
 
 
 // The tabs and style come from boot strap material site
