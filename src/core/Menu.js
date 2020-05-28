@@ -72,7 +72,7 @@ const Menu = ({history}) => ( //destructure here of props
             <li className="nav-item">
                 <a
                 className="nav-link" 
-                style={isActive(history, "/signout")}  
+                style={isActive(history, "/signout"), {curser: "pointer", color: "#999999"}}  
                 to="/signout"
                 onClick={() => signout(() => history.push('/signout'))}
                 > 
