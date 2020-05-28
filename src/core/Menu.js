@@ -64,7 +64,7 @@ const Menu = ({history}) => ( //destructure here of props
 {/*The comment below is showing the signin and signout links if the */}
 {/* User is not authenticated */}
       {!isAuthenticated() && (
-            <> {/* yes this works in react because of "react dot fragments"
+            <> {/* yes this works in react because of react dot fragments */}
                {/* Sign-up page */} 
 
                <li className="nav-item">
