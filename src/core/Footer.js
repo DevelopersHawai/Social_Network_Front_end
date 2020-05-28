@@ -35,7 +35,7 @@ const Menu = ({history}) => ( //destructure here of props
                 className="nav-link" 
                 style={isActive(history, "/about")}  
                 to="/about"> 
-            Contact-us 
+            Press Release 
                 </Link>
             </li>
             
@@ -45,7 +45,7 @@ const Menu = ({history}) => ( //destructure here of props
             <li className="nav-item">
                   <Link 
                   className="nav-link" style={isActive(history, "/")} to="/"> 
-            Home 
+            IPO
                   </Link>
        </li>
 
@@ -54,7 +54,7 @@ const Menu = ({history}) => ( //destructure here of props
             <li className="nav-item">
                   <Link 
                   className="nav-link" style={isActive(history, "/signup")} to="/signup">  
-            Sign-Up  
+           Whats New  
                   </Link>
         </li>
 
@@ -64,7 +64,7 @@ const Menu = ({history}) => ( //destructure here of props
           <li className="nav-item">
                 <Link 
                 className="nav-link" style={isActive(history, "/signin")}  to="/signin"> 
-            Sign-In  
+            Investor Publications  
                 </Link>
             </li>
 
@@ -76,7 +76,7 @@ const Menu = ({history}) => ( //destructure here of props
                 to="/signout"
                 onClick={() => signout(() => history.push('/signout'))}
                 > 
-            Sign-Out  
+            Careers  
                 </a>
             </li>
       </ul>
