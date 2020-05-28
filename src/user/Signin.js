@@ -102,6 +102,7 @@ clickSubmit = event => {
                         type="email"
                         className="form-control"
                         value={email}/* we destructured the syntax (this.state) the state and place its value into email */
+                        placeholder="John Doe"
                         />
         </div>
         <div className="form-group">
@@ -113,6 +114,7 @@ clickSubmit = event => {
                         type="password" 
                         className="form-control"
                         value={password}/* we destructured the syntax (this.state) then we grab the state and place its value into email */
+                        placeholder="<password goes here>"
                         />
         </div>
                     <button onClick={this.clickSubmit} //the method to ...

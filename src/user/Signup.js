@@ -84,6 +84,7 @@ clickSubmit = event => {
                             value={name} /* we grab the state and place its value into name */
                             placeholder="John Doe"
                         />
+                        {/* If you want the privacy statement it would go here*/}
         </div> 
                          {/* Next do above; 2X  (email and password) */}
                

@@ -10,26 +10,54 @@ const isActive = (history, path) => {
 //bootsrap material designß
 const Menu = ({history}) => ( //destructure here of props
                               <div> 
+          
+    
     <ul className="nav nav-tabs bg-...color.">  {/*you can say bg-primary for green*/} 
+            
+ {/* About me page */}
+
+    <li className="nav-item">
+                <Link 
+                className="nav-link" 
+                style={isActive(history, "/about")}  
+                to="/about"> 
+            Contact-us 
+                </Link>
+            </li>
+            
+    {/* Home page */}         
+            
+            
             <li className="nav-item">
                   <Link 
                   className="nav-link" style={isActive(history, "/")} to="/"> 
             Home 
                   </Link>
        </li>
+
+   {/* Sign-up page */} 
+
             <li className="nav-item">
                   <Link 
                   className="nav-link" style={isActive(history, "/signup")} to="/signup">  
             Sign-Up  
                   </Link>
         </li>
+
+ {/* Signin page */} 
+
+
           <li className="nav-item">
                 <Link 
                 className="nav-link" style={isActive(history, "/signin")}  to="/signin"> 
             Sign-In  
                 </Link>
             </li>
-      </ul>
+
+      <li class="nav-item">
+    <a class="nav-link disabled" href="#">Premium-Users</a>
+  </li>
+</ul>
                             </div>
 );
 export default withRouter(Menu);  // the benefit of a higher order component  props
