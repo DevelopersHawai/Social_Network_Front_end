@@ -82,6 +82,7 @@ clickSubmit = event => {
                             type="text" 
                             className="form-control" 
                             value={name} /* we grab the state and place its value into name */
+                            placeholder="John Doe"
                         />
         </div> 
                          {/* Next do above; 2X  (email and password) */}
@@ -94,7 +95,7 @@ clickSubmit = event => {
                         type="email"
                         className="form-control"
                         value={email}/* we destructured the syntax (this.state) the state and place its value into email */
-                        placeholder="email@company.com .......  format expected"
+                        placeholder="email@company.com"
                         />
 
         </div>
@@ -108,6 +109,7 @@ clickSubmit = event => {
                         type="password" 
                         className="form-control"
                         value={password}/* we destructured the syntax (this.state) then we grab the state and place its value into email */
+                        placeholder="Must have 9 characters and a special character"
                         />
         </div>
                     <button onClick={this.clickSubmit} //the method to ...
