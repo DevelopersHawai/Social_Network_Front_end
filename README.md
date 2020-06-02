@@ -33,3 +33,6 @@ If you want to contribute.  Please see here on how to [contribute](https://githu
 
 - [x] User Signout, and confirmation [page](https://github.com/Hawaiideveloper/Social_Network_Front_end/issues/23) 
 
+
+### User Profile Pages
+

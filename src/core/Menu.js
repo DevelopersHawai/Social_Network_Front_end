@@ -86,7 +86,7 @@ const Menu = ({history}) => ( //destructure here of props
                 
              
                 > 
-            {isAuthenticated().user.name}  
+            {`${isAuthenticated().user.name}'s profile`}  
                 </a>
             </li>
                   
