@@ -17,8 +17,9 @@ class Node {  //Ading a Node class to it
         this.next = null;
     }
 }
-
-class Queue { //Somehow they need to go in and come out
+ 
+export default class Queue { //Somehow they need to go in and come out 
+    //and we reuse the metho in index.js
     constructor() {
         this.front = null;
         this.back = null;
@@ -50,7 +51,34 @@ class Queue { //Somehow they need to go in and come out
                     //Then move back pointer to new node 
                     this.back = node;
                 }
-    
+    this.print
+    }
+
+    print() {
+        // If the queue is empty
+        if(this.isEmpty()) {
+            console.log('The queue is empty')
+        }
+        // Else is not empty
+        else {
+
+        }
+        // temporary array
+        let tmpArr 
+        // temp variable to the front of the queue
+        let tmp = this.front;
+        //interate through the queue
+         //while temp has a value 
+         while(tmp)
+        {
+        // add value to temp array
+        tmpArr.push(tmp.value);
+        // move to the next element
+        tmp = tmp.next;
+        }
+        // print the values
+        console.log(tmpArr.join(','));
+
     }
 }
 
