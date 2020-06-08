@@ -36,3 +36,9 @@ If you want to contribute.  Please see here on how to [contribute](https://githu
 
 ### User Profile Pages
 
+- [x] Setup profile page
+- [x] Recall userId and post results to page
+- [x] Recall Email
+- [x] Setup environment to pull components
+- [ ] Fetch user profile 118  
+
