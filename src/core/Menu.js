@@ -78,12 +78,12 @@ const Menu = ({history}) => ( //destructure here of props
                Sign-Out
                     </div>  
                 </li>
-            <li className="nav-item">
-             <p  
-                className="nav-link"  
+            <li className="nav-item"> 
+                 
             >
                 <Link to={`/user/${isAuthenticated().user._id}`}
                 style={{color:"#262222"}}  //changes the color of the profile link
+                className="nav-link" 
                
                 
                 > {/*this goes to user / userid  */}
@@ -91,8 +91,6 @@ const Menu = ({history}) => ( //destructure here of props
                 {`${isAuthenticated().user.name}'s profile `}   
                 
                 </Link>
-                           
-            </p>
            </li>
           </>
       )}
