@@ -1,5 +1,6 @@
 export const signup = user => {
-    return fetch("http://localhost:8080/signup", {  //making a request to the backend
+    
+    return fetch(`${process.env.REACT_APP_API_URL}/signup`, {  //making a request to the backend
     method: "POST", 
     headers: { //good practive to list headers to avoid post errors
         Accept: "application/json", 
@@ -14,7 +15,7 @@ export const signup = user => {
 )};
 
 export const  signin = user => {
-    return fetch("http://localhost:8080/signin", {  //making a request to the backend
+    return fetch(`${process.env.REACT_APP_API_URL}/signin`, {  //making a request to the backend
     method: "POST", 
     headers: { //good practive to list headers to avoid collections errors
         Accept: "application/json", 
@@ -40,7 +41,7 @@ export const  authenticate = (jwt, next) => { //jason web token 'jwt'
  export const signout = (next) => {
     if(typeof window !== "undefined") localStorage.removeItem("jwt") //delete the local storage contents of the jwt &
                 next(); // then make sure we log them out of our backend api
-    return fetch("http://localhost:8080/signout", {
+    return fetch(`${process.env.REACT_APP_API_URL}/signout`, {
     method: "GET"
 })
     .then( response  => {
