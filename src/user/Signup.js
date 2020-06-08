@@ -31,7 +31,7 @@ handleChange = (name) => (event) => { //higher order function returns another fu
 
 clickSubmit = event => {
     event.preventDefault()
-    const { name, email, password } = this.state
+    const { name, email, password } = this.state //destructure the word "this"
     const user = {
         name,
         email,

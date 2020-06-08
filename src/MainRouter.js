@@ -19,7 +19,7 @@ const MainRouter = () => (
             <Route exact path="/signup" component={Signup } />
             <Route exact path="/signin" component={Signin} /> 
             <Route exact path="/signout" component={SignedOut} />
-            <Route exact path="/Profile" component={Profile} /> 
+            <Route exact path="/user/:userId" component={Profile} /> 
         </Switch>
        {/* <Footer />  */}
     </div>

@@ -36,7 +36,7 @@ class Signin extends Component { //Is the component a react function of scan lik
 clickSubmit = event => {
     event.preventDefault();
     this.setState({loading: true});
-    const { email, password } = this.state;
+    const { email, password } = this.state; //destructre the word "this"
     const user = {
         email,
         password

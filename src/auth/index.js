@@ -28,8 +28,7 @@ export const  signin = user => {
 .catch(err => console.log(err)
 )};
 
-export const  //jason web token 'jwt' 
-authenticate = (jwt, next) => {
+export const  authenticate = (jwt, next) => { //jason web token 'jwt' 
     // Make sure a window is ready as these things take time
     if(typeof window !== "undefined") {
         localStorage.setItem("jwt", JSON.stringify(jwt))
@@ -37,6 +36,7 @@ authenticate = (jwt, next) => {
     };
  };
  
+ //Signout is below 
  export const signout = (next) => {
     if(typeof window !== "undefined") localStorage.removeItem("jwt") //delete the local storage contents of the jwt &
                 next(); // then make sure we log them out of our backend api
@@ -49,6 +49,8 @@ authenticate = (jwt, next) => {
     })
     .catch(err => console.log(err))
 }
+
+
 
 export const isAuthenticated = () => {
     if(typeof window == "undefined") {

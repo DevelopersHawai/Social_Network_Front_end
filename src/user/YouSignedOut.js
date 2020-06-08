@@ -23,7 +23,11 @@ const SignedOut = () => (
 <p></p>
 
 
-<img src={ require("../core/images/world_image.jpg") } />
+<img src={ require("../core/images/purple_lamborghini.png") } 
+alt={"Another purple Lamborghini"}
+width={1000} 
+height={300}
+/>
 
     </form>
 );

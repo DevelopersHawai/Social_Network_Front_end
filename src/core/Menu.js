@@ -9,8 +9,6 @@ const isActive = (history, path) => {
       else return {color: "#999999"}
 };
 
-
-
 // The tabs and style come from boot strap material site
 //bootsrap material designß
 const Menu = ({history}) => ( //destructure here of props
@@ -21,7 +19,7 @@ const Menu = ({history}) => ( //destructure here of props
             
  {/* About me page */}
 
-    <li className="nav-item">
+            <li className="nav-item">
                 <Link 
                 className="nav-link" 
                 style={isActive(history, "/about")}  
@@ -30,18 +28,18 @@ const Menu = ({history}) => ( //destructure here of props
                 </Link>
             </li>
             
-    {/* Home page */}         
+{/* Home page */}         
             
             
             <li className="nav-item">
-                  <Link 
-                  className="nav-link" style={isActive(history, "/")} to="/"> 
+                <Link 
+                className="nav-link" style={isActive(history, "/")} to="/"> 
             Home 
-                  </Link>
-       </li>
+                </Link>
+            </li>
 
-{/*The comment below is showing the signin and signout links if the */}
-{/* User is not authenticated */}
+        {/*The comment below is showing the signin and signout links if the */}
+        {/* User is not authenticated */}
       {!isAuthenticated() && (
             <> {/* yes this works in react because of react dot fragments */}
                {/* Sign-up page */} 
@@ -56,42 +54,47 @@ const Menu = ({history}) => ( //destructure here of props
 {/* Signin page */} 
 
 
-       <li className="nav-item">
+        <li className="nav-item">
              <Link 
              className="nav-link" style={isActive(history, "/signin")}  to="/signin"> 
          Sign-In  
              </Link>
-         </li>
+        </li>
          </>
       )}
 
             {isAuthenticated() && (
-              /* SignOut page  is hidden until authenticated*/         
-            <>
-            <li className="nav-item">
-                <a
-                className="nav-link" 
-                style={
-                     (isActive(history, "/signout"), 
-                {curser: "pointer", color: "#999999"}) 
+/* SignOut page  is hidden until authenticated*/         
+           <>
+                <li className="nav-item">
+                    <div 
+                    className="nav-link" 
+                    style={
+                    (isActive(history, "/signout"), 
+                    {curser: "pointer", color: "#999999"}) 
                }
-                onClick={() => signout(() => history.push("/signout"))}
-                > 
-            Sign-Out  
-                </a>
-            </li>
+               onClick={() => signout(() => history.push("/signout"))} 
+            > 
+               Sign-Out
+                    </div>  
+                </li>
             <li className="nav-item">
-                <a
-                className="nav-link" 
+             <p  
+                className="nav-link"  
+            >
+                <Link to={`/user/${isAuthenticated().user._id}`}
+                style={{color:"#262222"}}  //changes the color of the profile link
+               
                 
-             
-                > 
-            {`${isAuthenticated().user.name}'s profile`}  
-                </a>
-            </li>
-                  
-            </>
-
+                > {/*this goes to user / userid  */}
+                {/*using back ticks so we can use template strings */}
+                {`${isAuthenticated().user.name}'s profile `}   
+                
+                </Link>
+                           
+            </p>
+           </li>
+          </>
       )}
       </ul>
 </div>
