@@ -40,5 +40,6 @@ If you want to contribute.  Please see here on how to [contribute](https://githu
 - [x] Recall userId and post results to page
 - [x] Recall Email
 - [x] Setup environment to pull components
-- [ ] Fetch user profile 118  
+- [x] Fetch user profile 
+- [x] Add patch for websocket to avoid exhaustion ddos attack
 
