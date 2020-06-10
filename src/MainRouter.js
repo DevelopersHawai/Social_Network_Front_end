@@ -6,6 +6,7 @@ import Menu from './core/Menu';
 // import Footer from './core/Footer';
 import Signup from './user/Signup';
 import Signin from './user/Signin';
+import Profile from './user/Profile';
 import SignedOut from './user/YouSignedOut';
   
 
@@ -13,11 +14,12 @@ const MainRouter = () => (
     <div>
         <Menu />
         <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path="/about" component={about}></Route>
-            <Route exact path="/signup" component={Signup }></Route>
-            <Route exact path="/signin" component={Signin}></Route>   
-            <Route exact path="/signout" component={SignedOut}></Route> 
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={about}/>
+            <Route exact path="/signup" component={Signup } />
+            <Route exact path="/signin" component={Signin} /> 
+            <Route exact path="/signout" component={SignedOut} />
+            <Route exact path="/user/:userId" component={Profile} /> 
         </Switch>
        {/* <Footer />  */}
     </div>

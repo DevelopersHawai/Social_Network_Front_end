@@ -70,14 +70,14 @@ const Menu = ({history}) => ( //destructure here of props
 
   {/*SignOut page*/}          
             <li className="nav-item">
-                <a
+                <>
                 className="nav-link" 
                 style={isActive(history, "/signout")}  
                 to="/signout"
                 onClick={() => signout(() => history.push('/signout'))}
                 > 
             Careers  
-                </a>
+                </>
             </li>
       </ul>
 </div>
