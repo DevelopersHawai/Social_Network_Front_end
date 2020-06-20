@@ -19,16 +19,29 @@ const Menu = ({history}) => ( //destructure here of props
     
     <ul className="nav nav-tabs bg-priimary.">  {/*you can say bg-primary for green mispelled purposely*/} 
             
- {/* About me page */}
+ {/* Support page */}
 
             <li className="nav-item">
                 <Link 
                 className="nav-link" 
                 style={isActive(history, "/about")}  
                 to="/about"> 
-            Contact-us 
+            Support 
                 </Link>
             </li>
+{/* Users Page */}
+            <li className="nav-item">
+                    <Link 
+                    className="nav-link" 
+                    style={isActive(history, "/Users")} to="/users"> 
+           Users 
+                </Link>
+            </li>
+
+
+
+
+
             
 {/* Home page */}         
             
