@@ -3,7 +3,9 @@ import { Link, withRouter } from "react-router-dom";
 import {signout, isAuthenticated} from  '../auth'
 
 
-
+//compares with the path we give
+//if matches then we see the active class
+// This fixes the user profile link not lighting up
 const isActive = (history, path) => {
       if(history.location.pathname === path) return {color: "#1092F2"}
       else return {color: "#999999"}
@@ -15,7 +17,7 @@ const Menu = ({history}) => ( //destructure here of props
                               <div> 
           
     
-    <ul className="nav nav-tabs bg-...color.">  {/*you can say bg-primary for green*/} 
+    <ul className="nav nav-tabs bg-priimary.">  {/*you can say bg-primary for green mispelled purposely*/} 
             
  {/* About me page */}
 
@@ -31,9 +33,11 @@ const Menu = ({history}) => ( //destructure here of props
 {/* Home page */}         
             
             
-            <li className="nav-item">
-                <Link 
-                className="nav-link" style={isActive(history, "/")} to="/"> 
+            <li 
+                className="nav-item">
+                    <Link 
+                    className="nav-link" 
+                    style={isActive(history, "/")} to="/"> 
             Home 
                 </Link>
             </li>
@@ -79,15 +83,22 @@ const Menu = ({history}) => ( //destructure here of props
                     </div>  
                 </li>
             <li className="nav-item"> 
-                 
-            >
                 <Link to={`/user/${isAuthenticated().user._id}`}
-                style={{color:"#262222"}}  //changes the color of the profile link
+            
+            //changes the color (style) of the profile link
+                  style={
+                    isActive
+                                (history,
+                         `/user/${isAuthenticated().user._id}'}`
+                                )
+                        }
+
                 className="nav-link" 
-               
-                
-                > {/*this goes to user / userid  */}
+                > 
+
+
                 {/*using back ticks so we can use template strings */}
+                {/* this shows the user profile link */}
                 {`${isAuthenticated().user.name}'s profile `}   
                 
                 </Link>
