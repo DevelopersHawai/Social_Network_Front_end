@@ -42,4 +42,5 @@ If you want to contribute.  Please see here on how to [contribute](https://githu
 - [x] Setup environment to pull components
 - [x] Fetch user profile 
 - [x] Add patch for websocket to avoid exhaustion ddos attack
+- [x] Setup styling for active link and current page
 
