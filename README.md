@@ -45,3 +45,4 @@ If you want to contribute.  Please see here on how to [contribute](https://githu
 - [x] Setup styling for active link and current page
 - [ ] Display all users
 
+Left off on 126 looping through users.
