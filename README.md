@@ -43,4 +43,6 @@ If you want to contribute.  Please see here on how to [contribute](https://githu
 - [x] Fetch user profile 
 - [x] Add patch for websocket to avoid exhaustion ddos attack
 - [x] Setup styling for active link and current page
+- [ ] Display all users
 
+Left off on 126 looping through users. please see branch "user profile pages"
