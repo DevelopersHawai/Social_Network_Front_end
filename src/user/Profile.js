@@ -40,6 +40,12 @@ componentDidMount() {
     this.init(userId);
 }
 
+componentWillReceiveProps(props) {
+    const userId = props.match.params.userId
+    this.init(userId);
+}
+
+
     render() {
 
         const {redirectToSignin, user}= this.state;
