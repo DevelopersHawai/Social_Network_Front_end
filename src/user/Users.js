@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {list} from './apiUser';
 import DefaultProfile from '../images/unisex-avatar.jpg';
+import { Link } from 'react-router-dom';
 
+
+//Starts the session
 class Users extends Component {
     constructor() {
         super();
@@ -33,11 +36,15 @@ renderUsers = (users) => (
             />
        <div className="card-body">
          <h5 className="card-title">{user.name}</h5>
-         <p className="card-text">{user.email}
-                                  </p>
-         <a href="#" className="btn btn-raised btn-primary btn-sm">
+         <p className="card-text">{user.email} </p>
+         <Link
+         // this became an object!  it uses back ticks
+         //makes it so you see only your session.  That session only allows you to 
+         //delete your email
+              to={`/user/${user._id}`}
+         className="btn btn-raised btn-primary btn-sm">
              View Profile
-             </a>
+             </Link>
        </div>
      </div>
     ))} 
