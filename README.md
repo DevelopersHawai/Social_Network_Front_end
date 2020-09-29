@@ -46,3 +46,10 @@ If you want to contribute.  Please see here on how to [contribute](https://githu
 - [ ] Display all users
 
 Left off on 126 looping through users. please see branch "user profile pages"
+
+Also if you want me to answer questions fast please git a bitcoin account and you can send money to me [here]()
+
+Otherwise please wait your turn.
+
+
+oh and made the button green using the class success within bootstrap material sign within profile file
