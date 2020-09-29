@@ -3,6 +3,8 @@ import {isAuthenticated} from '../auth'
 import { Redirect, Link } from 'react-router-dom';
 import {read} from "./apiUser";
 import DefaultProfile from '../images/unisex-avatar.jpg';
+import DeleteUser from './DeleteUser';
+
 
 // Make a request to the back-end to get the a user's information
 
@@ -78,11 +80,7 @@ componentDidMount() {
                      Edit Profile
                      </Link>
 
-                    <button className="btn btn-raised btn-danger">
-                    Delete Profile
-
-
-                    </button>
+                   <DeleteUser />
                          
               </div>
  )}
