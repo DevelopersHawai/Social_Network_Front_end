@@ -62,6 +62,7 @@ const Menu = ({history}) => ( //destructure here of props
                {/* Sign-up page */} 
 
                <li className="nav-item">
+                   
                <Link 
                className="nav-link" style={isActive(history, "/signup")} to="/signup">  
          Sign-Up  

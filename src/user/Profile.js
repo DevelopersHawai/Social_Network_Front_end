@@ -86,7 +86,9 @@ componentWillReceiveProps(props) {
                      Edit Profile
                      </Link>
 
-                   <DeleteUser />
+                               {/*this is a destructured method variable*/} 
+
+                   <DeleteUser userId={user._id} />
                          
               </div>
  )}
