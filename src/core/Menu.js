@@ -84,7 +84,7 @@ const Menu = ({history}) => ( //destructure here of props
 /* SignOut page  is hidden until authenticated*/         
            <>
                 <li className="nav-item">
-                    <div 
+                    <span
                     className="nav-link" 
                     style={
                     (isActive(history, "/signout"), 
@@ -93,7 +93,7 @@ const Menu = ({history}) => ( //destructure here of props
                onClick={() => signout(() => history.push("/signout"))} 
             > 
                Sign-Out
-                    </div>  
+                    </span>  
                 </li>
             <li className="nav-item"> 
                 <Link to={`/user/${isAuthenticated().user._id}`}
