@@ -3,6 +3,7 @@ import {isAuthenticated} from '../auth'
 import { Redirect, Link } from 'react-router-dom';
 import {read} from "./apiUser";
 import DefaultProfile from '../images/unisex-avatar.jpg';
+import DeleteUser from './DeleteUser';
 
 // Make a request to the back-end to get the a user's information
 
@@ -36,7 +37,7 @@ export class Profile extends Component {
 componentDidMount() {
     const userId = this.props.match.params.userId;
     this.init(userId);
-};
+}
 
 componentWillReceiveProps(props) {   //habilitando la opcion en el menu superior para devolverse al perfil personal.
     const userId = props.match.params.userId;
@@ -83,11 +84,7 @@ componentWillReceiveProps(props) {   //habilitando la opcion en el menu superior
                      Edit Profile
                      </Link>
 
-                    <button className="btn btn-raised btn-danger">
-                    Delete Profile
-
-
-                    </button>
+                  <DeleteUser />
                          
               </div>
  )}
