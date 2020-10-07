@@ -39,7 +39,7 @@ componentDidMount() {
     this.init(userId);
 }
 
-componentWillReceiveProps(props) {   //habilitando la opcion en el menu superior para devolverse al perfil personal.
+componentWillReceiveProps(props) {   //habilitando la opcion en el menu superior para devolverse al perfil personal. 
     const userId = props.match.params.userId;
     this.init(userId);
 }
