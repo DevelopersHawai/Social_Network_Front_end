@@ -34,14 +34,19 @@ export class Profile extends Component {
     };
 
 componentDidMount() {
-    const userId = this.props.match.params.userId
+    const userId = this.props.match.params.userId;
+    this.init(userId);
+};
+
+componentWillReceiveProps(props) {
+    const userId = props.match.params.userId;
     this.init(userId);
 }
 
     render() {
 
         const {redirectToSignin, user}= this.state;
-            if(redirectToSignin) return <Redirect to="/signin" />
+            if(redirectToSignin) return <Redirect to="/signin" />;
         return (
             //Create the container  object to hold into columns 
             <div className="container">
